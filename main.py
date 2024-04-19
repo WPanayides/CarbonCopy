@@ -3,6 +3,7 @@
 
 import os
 import requests
+import secrets
 from django.conf import settings
 from django.http import JsonResponse
 from django.urls import path
@@ -11,7 +12,7 @@ from django.core.management import execute_from_command_line
 
 # Django settings
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-SECRET_KEY = 'your_secret_key'
+SECRET_KEY = secrets.secret_key
 DEBUG = True
 
 settings.configure(
